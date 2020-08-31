@@ -1,0 +1,33 @@
+<h1 style="text-align:center">
+  Primer proyecto angular
+</h1>
+<div>
+  <p>Nombre del Empleado: {{nombre}}</p>
+  <p>Edad: {{edad}}</p>
+  <p>Los últimos tres sueldos son: {{sueldos[0]}},{{sueldos[1]}},{{sueldos[2]}} </p>
+  <p>En los últimos 3 meses ha ganado: {{ultimos3Sueldos()}}</p>
+  <p>{{esActivo()}}</p>
+
+
+
+
+<!--Directivas *ngfl y *ngFor-->
+<p *ngIf="edad>=18; else menor">Es mayor de edad.</p>
+<ng-template #menor><p>Es menor de edad.</p></ng-template>
+<table border="1">
+<tr>
+  <td>sueldos</td>
+</tr>
+<tr *ngFor="let sueldo of sueldos">
+  <td>{{sueldo}}</td>
+</tr>
+</table>
+<!--Captura de eventos ejemplo contador-->
+<br>
+<div>
+  <button (click)="incrementar()">Sumar 1</button>
+  <br>
+  <button (click)="decrementar()">Restar 1</button>
+  <p><strong>Contador: </strong>{{contador}}</p>
+</div>
+</div>

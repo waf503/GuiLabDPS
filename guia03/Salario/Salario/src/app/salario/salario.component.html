@@ -1,0 +1,106 @@
+<div class="jumbotron jumbotron-fluid h-color" >
+    <div class="container ">
+      <h1 class="display-3">Sueldo Neto</h1>
+      <p class="lead">Favor Ingrese los datos del empleado para calcular su sueldo neto.</p>
+    </div>
+</div>
+<div class="caja">
+
+<div class="form-group col-md-6">
+  <label for="nombre">Nombre: </label>
+  <input type="text" class="form-control" placeholder="Juan" [(ngModel)]="nombre">
+</div>
+
+<div class="form-group col-md-6">
+  <label for="nombre">Apellido: </label>
+  <input type="text" class="form-control" placeholder="Sanchez" [(ngModel)]="apellido">
+</div>
+
+<div class="form-group col-md-6">
+  <label for="sueldo">Sueldo base: </label>
+  <input type="number" min="0"  class="form-control" id="sueldo" name="sueldo" placeholder="300.00" [(ngModel)]="sueldo">
+</div>
+
+<div class="form-group col-md-6">
+  <button class="button btn-primary" (click)="ingresar()">Ingresar</button>
+</div>
+<br><br>
+<table [hidden]="contador == 0" class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Sueldo Base</th>
+            <th>Descuento ISSS</th>
+            <th>Descuento Renta</th>
+            <th>Descuento AFP</th>
+            <th>Total descontado</th>
+            <th>Sueldo Final</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr *ngFor="let templeado of registro">
+            <td>{{templeado.nombre}}</td>
+            <td>{{templeado.sueldo}}</td>
+            <td>{{templeado.seguro}}</td>
+            <td>{{templeado.renta}}</td>
+            <td>{{templeado.afp}}</td>
+            <td>{{templeado.descuento}}</td>
+            <td>{{templeado.sueldoFinal}}</td>
+        </tr>
+    </tbody>
+    
+</table>
+</div>
+
+    <form>
+      
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="nombre">Nombre: </label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan" [(ngModel)]="nombre">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="apellido">Apellido: </label>
+            <input type="text" class="form-control" id="apellido" name="apellidos" placeholder="Perez" [(ngModel)]="apellido">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="sueldo">Sueldo base: </label>
+            <input type="text"  class="form-control" id="sueldo" name="sueldo" placeholder="300.00" [(ngModel)]="sueldo">
+          </div>
+        </div>  
+          
+      
+     
+           
+        <button class="button btn-primary" (click)="calcular()">Calcular</button>
+
+        
+      </form>
+
+      <br><br>
+      <table [hidden]="contador == 0" class="table">
+          <thead>
+              <tr>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Sueldo base</th>
+                  <th>Sueldo Neto</th>
+              </tr>
+          </thead> 
+          <tbody>
+              <tr *ngFor="let templeado of listaEmpleado">
+                  <td>{{templeado.nombre}}</td>
+                  <td>{{templeado.apellido}}</td>
+                  <td>{{templeado.sueldo}}</td>
+                  <td>{{templeado.sueldoFinal}}</td>
+              </tr>
+          </tbody>
+          
+      </table> -->
+
+    
+        
+
+
+
+
