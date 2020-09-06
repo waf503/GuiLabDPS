@@ -3,7 +3,7 @@ class Persona{
     nombre: string;
     edad: number;
 
-    //constructor
+    //constructor es el primer metodo que se ejecuta en una  clase
     constructor(nombre:string, edad:number){
         this.nombre = nombre;
         this.edad = edad;
