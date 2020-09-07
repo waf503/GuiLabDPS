@@ -42,7 +42,7 @@ export class AppComponent {
   delete(): void{
     if(confirm('Esta seguro de eliminar el Registro?')){
       this.alumnoArray = this.alumnoArray.filter(x => x != this.selectedAlumno);
-      this.selectedAlumno = {id:0, name: '', lastname: '', age:0, direccion: '', email: '',tel: 0};
+      this.selectedAlumno = {id:0, name: '', lastname: '', age:0, direccion: '', email: '',tel: 0}  ;
     }
   }
 }
