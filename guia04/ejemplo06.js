@@ -25,4 +25,4 @@ var Matematica = /** @class */ (function () {
 var x1 = Matematica.aleatorio(1, 5);
 var x2 = Matematica.aleatorio(1, 5);
 console.log("El mayor entre " + x1 + " y " + x2 + " es " + Matematica.mayor(x1, x2));
-//console.log(`El menor entre ${x1} y ${x2} es ${Matematica.menor(x1,x2)}`);
+console.log("El menor entre " + x1 + " y " + x2 + " es " + Matematica.menor(x1, x2));
