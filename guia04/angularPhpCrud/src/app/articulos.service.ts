@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ArticulosService {
-  url = 'http://localhost/crudAngular/';//disponer url de su servidor que tiene las paginas php
+  url = 'php/';//disponer url de su servidor que tiene las paginas php
 
 
   constructor(private http: HttpClient) { }
