@@ -1,0 +1,49 @@
+<div class="card mt-5">
+    <div class="card-body">
+        <h6 class="text-center">Ingresar Alumno</h6>
+        <!-- Cuando el evento onSubmit , suceda se va pasar todo el formulario 'productForm' -->
+        <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+
+            <!-- TO UPDATE -->
+            <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="productService.selectedProduct.$key">
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" #name="ngModel"
+                    [(ngModel)]="productService.selectedProduct.name" placeholder="Nombre">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="apellido" #apellido="ngModel"
+                    [(ngModel)]="productService.selectedProduct.apellido" placeholder="Apellido">
+            </div>
+
+            <div class="form-group">
+                <input type="number" class="form-control" name="edad" #edad="ngModel"
+                    [(ngModel)]="productService.selectedProduct.edad" placeholder="Edad">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="direccion" #direccion="ngModel"
+                    [(ngModel)]="productService.selectedProduct.direccion" placeholder="Direccion">
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-control" name="tel" #tel="ngModel"
+                    [(ngModel)]="productService.selectedProduct.tel" placeholder="Tel.">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" #email="ngModel"
+                    [(ngModel)]="productService.selectedProduct.email" placeholder="Email">
+            </div>
+            
+            
+
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-plus-circle"></i> Agregar Alumno
+                </button>
+                <button class="btn btn-secondary" type="reset" (click)="resetForm(productForm)">
+                    <i class="fas fa-sync-alt"></i> Limpiar campos
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
